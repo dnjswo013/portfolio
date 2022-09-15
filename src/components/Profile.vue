@@ -1,19 +1,28 @@
 <script setup lang="ts">
 import { defineComponent, defineProps } from "vue";
 
-defineComponent({
+const component = defineComponent({
   name: "HelloWorld",
 });
 
-defineProps({
-  msg: String,
+const props = defineProps({
+  message: String,
 });
 </script>
 
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
+  <div class="intro">
+    <h1>{{ message }}</h1>
+    <img src="../assets/megane_hikaru_man.png" />
+    <h3>My Name :</h3>
+    <p>__my_name__</p>
+    <h3>Introduction :</h3>
+    <p>__my_introduction__</p>
+    <h3>Link to other services :</h3>
+    <a href="https://github.com/dnjswo013/portfolio" target="_blank"
+      >https://github.com/dnjswo013/portfolio</a
+    >
+    <!-- <p>
       For a guide and recipes on how to configure / customize this project,<br />
       check out the
       <a href="https://cli.vuejs.org" target="_blank" rel="noopener"
@@ -118,12 +127,21 @@ defineProps({
           >awesome-vue</a
         >
       </li>
-    </ul>
+    </ul> -->
   </div>
 </template>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.intro {
+  padding-bottom: 50px;
+}
+
+img {
+  width: 150px;
+  height: auto;
+}
+
 h3 {
   margin: 40px 0 0;
 }
@@ -139,6 +157,11 @@ li {
 }
 
 a {
-  color: #42b983;
+  font-size: large;
+  color: #4262b9;
+}
+
+p {
+  font-size: large;
 }
 </style>
