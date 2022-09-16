@@ -12,16 +12,27 @@ const props = defineProps({
 
 <template>
   <div class="intro">
-    <h1>{{ message }}</h1>
-    <img src="../assets/megane_hikaru_man.png" />
-    <h3>My Name :</h3>
-    <p>__my_name__</p>
-    <h3>Introduction :</h3>
-    <p>__my_introduction__</p>
-    <h3>Link to other services :</h3>
-    <a href="https://github.com/dnjswo013/portfolio" target="_blank"
-      >https://github.com/dnjswo013/portfolio</a
-    >
+    <!-- <h1>{{ message }}</h1> -->
+    <img class="profile" src="../assets/megane_hikaru_man.png" />
+    <h2>My Name</h2>
+    <p>僕の名前</p>
+    <h2>Introduction</h2>
+    <p>
+      私の自己紹介文をここに記載します。<br />初めてのポートフォリオですが、頑張って作っております。<br />目指すのは、それなりのITエンジニアになることです。
+    </p>
+    <h2>Link to other services</h2>
+    <ul>
+      <li>
+        <a href="https://github.com/dnjswo013/portfolio" target="_blank"
+          ><img src="../assets/github.png" /><br />Github</a
+        >
+      </li>
+      <li>
+        <a href="https://twitter.com/dnjswo013" target="_blank"
+          ><img src="../assets/twitter.png" /><br />twitter</a
+        >
+      </li>
+    </ul>
     <!-- <p>
       For a guide and recipes on how to configure / customize this project,<br />
       check out the
@@ -137,13 +148,18 @@ const props = defineProps({
   padding-bottom: 50px;
 }
 
-img {
-  width: 150px;
+.profile {
+  width: 200px;
   height: auto;
 }
 
-h3 {
-  margin: 40px 0 0;
+img {
+  width: 125px;
+  height: auto;
+}
+
+h2 {
+  margin: 55px 0 0;
 }
 
 ul {
@@ -157,7 +173,7 @@ li {
 }
 
 a {
-  font-size: large;
+  font-size: larger;
   color: #4262b9;
 }
 
