@@ -1,6 +1,7 @@
 <template>
   <nav>
-    <router-link to="/">Profile</router-link>
+    <router-link to="/">Profile</router-link> |
+    <router-link to="/about">About</router-link>
   </nav>
   <router-view />
 </template>
@@ -8,13 +9,12 @@
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #322c50;
 }
 
 nav {
+  text-align: center;
+  font-size: x-large;
   padding: 30px;
 }
 
