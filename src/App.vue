@@ -1,7 +1,8 @@
 <template>
   <nav>
     <router-link to="/">Profile</router-link> |
-    <router-link to="/skill">Skill</router-link>
+    <router-link to="/skill">Skill</router-link> |
+    <router-link to="/production">Production</router-link>
   </nav>
   <router-view />
 </template>

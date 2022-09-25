@@ -1,50 +1,47 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { reactive } from "vue";
+import { Skill } from "@/interface/skill";
 
-const skills = ref<string[]>([]);
-skills.value = ["Vue.js", "Python", "TypeScript"];
+const skill_list = reactive<Skill[]>([
+  {
+    name: "Vue.js + TypeScript",
+    image: require("../assets/ahoudori.jpeg"),
+    content: "Frontend",
+  },
+  {
+    name: "Python + Flask",
+    image: require("../assets/ahoudori.jpeg"),
+    content: "Backend",
+  },
+  {
+    name: "AWS Services",
+    image: require("../assets/ahoudori.jpeg"),
+    content: "Infrastructure",
+  },
+  {
+    name: "Docker Desktop",
+    image: require("../assets/ahoudori.jpeg"),
+    content: "Container Service",
+  },
+  {
+    name: "LPIC-3 Virtualization & High Availability",
+    image: require("../assets/ahoudori.jpeg"),
+    content: "Infrastructure",
+  },
+]);
 </script>
 
 <template>
-  <div class="header">Skill Page</div>
-  <div class="wrapper">
-    <div v-for="skill in skills" :key="skill" class="card">
-      <div class="container">
-        <h4>
-          <b>{{ skill }}</b>
-        </h4>
-        <p>Architect & Engineer</p>
+  <div class="header">Skills</div>
+  <div class="card_group">
+    <div class="card" v-for="skill in skill_list" :key="skill.name">
+      <!-- <img class="card__imgframe" :src="skill.image" /> -->
+      <div class="description">
+        <h4>{{ skill.name }}</h4>
+        <p>{{ skill.content }}</p>
       </div>
     </div>
   </div>
 </template>
 
-<style scoped>
-.header {
-  font-size: xx-large;
-  font-weight: bold;
-  text-align: center;
-  padding: 25px;
-}
-
-.wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.card {
-  box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.2);
-  transition: 0.5s;
-  margin: auto;
-}
-
-.card:hover {
-  box-shadow: 4px 8px 16px 4px rgba(0, 0, 0, 0.2);
-}
-
-/* Add some padding inside the card container */
-.container {
-  padding: 2px 16px;
-}
-</style>
+<style src="../style/card.css" scoped></style>
